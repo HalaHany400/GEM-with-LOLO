@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>GEM</title>
+    </head>
+    <body> 
+      <h1> GRAND EGYPTIAN MUSEUM </h1>  
+      <p>    The <mark>Grand Egyptian Museum</mark> is the largest archaeological museum in the world </p>
+      <p>    It shows the anceint egyptian civilisation</p>
+      <p>    Features a modern triangular design inspired by the shape of the pyramids</p>
+      <img
+      src="photo infrontof the musuem.jpeg"/>
+      <p>     Includes over 5000 artifacts like 
+        the golden funerary mask, jewelry and personal belonging </p>
+      <img
+      src="hla.jpeg"/>
+      <details>
+        <summary><em>Tickets</em></summary>
+        <p> The ticket isjust L.E 100 for Egyptian students</p>
+        <p> For foreigners students its L.E750 <p/>
+      </details>
+        <img
+      src="loloooo.jpeg"/>
+      <p> You will enjoy and have a wonderful photos. For more info <a href="https://www.visit-gem.com/en/home" target="_blank">Click here</a>.
+      </p>
+      <button onclick="showInfo()">Show Info</button>
+      <dialog id="info">
+        <code id="info-text"></code>
+        <button commandfor="info" command="close">Close Dialog</button>
+      </dialog>
+      <script defer>
+        const INFO = [
+          "The Grand Egyptian Museum is the largest museum in the world dedicated to a single civilization.",
+          "For the first time ever, all 5,000 artifacts of Tutankhamun will be displayed together in one place.",
+          "The museum is located only about 2 kilometers from the Giza Pyramid Complex, so visitors can see the pyramids from inside the building.",
+          "A giant 83-ton statue of Ramesses II welcomes visitors at the entrance hall.",
+          "The museum contains more than 100,000 ancient Egyptian artifacts, many of which were never displayed before.",
+          "Construction of the museum began in 2005 and took nearly two decades to complete.",
+          "Inside the museum there is a large conservation center where scientists restore ancient artifacts using modern technology.",
+          "The famous solar boat of Khufu has been moved to the museum to be preserved and displayed.",
+          "The museum's Grand Staircase displays statues of ancient Egyptian kings and gods, creating a dramatic historical entrance.",
+          "The museum complex covers about 500,000 square meters, making it one of the largest cultural buildings ever constructed."
+        ];
+        const InfoText = document.getElementById("info-text");
+
+        function showInfo() {
+          const InfoDialog = document.getElementById("info");
+          const ChosenInfo = INFO[Math.floor(Math.random() * INFO.length)];
+          InfoText.innerText = ChosenInfo;
+          InfoDialog.showModal();
+        }
+      </script>
+    </body>
+</html>
